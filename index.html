@@ -2,33 +2,128 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hot Video Online 🔥</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BD Earning - সহজে আয় করুন</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f7f9fc;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 480px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      color: #1e88e5;
+    }
+    p.subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 25px;
+    }
+    .btn-primary {
+      background: #1e88e5;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(30,136,229,0.4);
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+    .btn-primary:hover {
+      background: #1565c0;
+      box-shadow: 0 8px 25px rgba(21,101,192,0.6);
+    }
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 1rem;
+      color: #333;
+      font-weight: 500;
+    }
+    .feature-item svg {
+      fill: #1e88e5;
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+    .testimonials {
+      background: #e3f2fd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .testimonial {
+      margin-bottom: 15px;
+      font-style: italic;
+      color: #0d47a1;
+    }
+    footer {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 30px;
+    }
+    @media (min-width: 600px) {
+      .features {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <h1 class="title">🔥 Hot Video Gallery 🔥</h1>
-
-  <div class="gallery">
-    <div class="video-card" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-      <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video 1"/>
-      <p>Video 1</p>
+  <div class="container">
+    <h1>দিনে ৫০০৳ আয় করুন খুব সহজে!</h1>
+    <p class="subtitle">সরাসরি মোবাইলে, সহজ পেমেন্ট এবং দ্রুত উইথড্রয়াল</p>
+    <a href="https://yourapp.link/signup" class="btn-primary">এখনই শুরু করুন</a>
+    
+    <div class="features">
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
+        দ্রুত আয় করুন
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
+        রেফারেল বোনাস
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
+        নিরাপদ পেমেন্ট
+      </div>
     </div>
-    <div class="video-card" onclick="openVideo('https://www.youtube.com/embed/tgbNymZ7vqY')">
-      <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Video 2"/>
-      <p>Video 2</p>
+    
+    <div class="testimonials">
+      <div class="testimonial">"আমি BD Earning দিয়ে দিনে সহজেই ৫০০৳ উপার্জন করছি!" – সোহেল</div>
+      <div class="testimonial">"পেমেন্ট খুব দ্রুত পাচ্ছি, খুব সহজ ওয়েবসাইট!" – রিনা</div>
     </div>
-    <!-- আরও ভিডিও চাইলে এখানে বসাও -->
+    
+    <footer>© 2025 BD Earning | যোগাযোগ: info@bdearning.com</footer>
   </div>
-
-  <!-- Overlay Player -->
-  <div id="overlay" class="overlay" onclick="closeVideo()">
-    <div class="video-container">
-      <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
