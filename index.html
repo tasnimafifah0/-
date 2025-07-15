@@ -3,174 +3,250 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BD Earning Premium Landing</title>
+<title>BD Earning Social Style Landing</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
   * {
-    margin: 0; padding: 0; box-sizing: border-box;
+    margin:0; padding:0; box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
   }
   body {
-    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    background: #111;
     color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
-  }
-  .container {
-    max-width: 480px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(255, 75, 43, 0.7);
-  }
-  .hero {
-    position: relative;
-    height: 320px;
-    background: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
-    cursor: pointer;
-  }
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90px;
-    height: 90px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 18px 4px rgba(255, 255, 255, 0.6);
-    transition: background 0.3s ease, transform 0.3s ease;
-    animation: pulse 2.5s infinite;
-  }
-  .play-button:hover {
-    background: rgba(255, 255, 255, 0.6);
-    transform: translate(-50%, -50%) scale(1.1);
-    box-shadow: 0 0 28px 6px rgba(255, 255, 255, 0.8);
-  }
-  @keyframes pulse {
-    0%, 100% {
-      box-shadow: 0 0 18px 4px rgba(255, 255, 255, 0.6);
-    }
-    50% {
-      box-shadow: 0 0 28px 6px rgba(255, 255, 255, 0.9);
-    }
-  }
-  .play-button svg {
-    width: 42px;
-    height: 42px;
-    fill: #ff4b2b;
-    filter: drop-shadow(0 0 4px rgba(255, 75, 43, 0.7));
-    margin-left: 6px;
-  }
-  .content {
-    padding: 30px 25px 40px;
-    text-align: center;
+    min-height: 100vh;
   }
   h1 {
-    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 30px;
     font-weight: 700;
-    margin-bottom: 14px;
-    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+    color: #ff2e63;
   }
-  p.subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 28px;
-    font-weight: 500;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  .gallery {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 20px;
   }
-  .btn-primary {
-    background: #ff4b2b;
-    padding: 16px 48px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.3rem;
-    border: none;
-    color: white;
+  .card {
+    background: #222;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 46, 99, 0.7);
+    transition: transform 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 6px 22px rgba(255,75,43,0.8);
-    transition: background 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 32px;
   }
-  .btn-primary:hover {
-    background: #ff6f59;
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(255,111,89,0.9);
+  .card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 30px rgba(255, 46, 99, 0.9);
   }
-  .features {
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .social-bar {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    color: #ffb1a0;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    text-align: left;
-    padding: 0 15px;
+    justify-content: space-around;
+    padding: 12px 0;
+    background: #1a1a1a;
   }
-  .feature-item {
+  .social-btn {
     display: flex;
     align-items: center;
-    gap: 16px;
-  }
-  .feature-item svg {
-    width: 28px;
-    height: 28px;
-    fill: #ff4b2b;
-    filter: drop-shadow(0 0 3px rgba(255,75,43,0.7));
-    flex-shrink: 0;
-  }
-  footer {
-    font-size: 0.85rem;
-    color: #ffb1a0;
-    text-align: center;
+    gap: 8px;
+    color: #ff2e63;
+    font-weight: 600;
     user-select: none;
-    padding-bottom: 20px;
+    transition: color 0.3s ease;
   }
-  @media (min-width: 600px) {
-    .features {
-      flex-direction: row;
-      justify-content: space-around;
-    }
+  .social-btn:hover {
+    color: #ff4b7b;
+  }
+  .social-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  .social-btn.like.liked {
+    color: #ff6666;
+  }
+  .comment-box {
+    display: none;
+    background: #222;
+    padding: 10px 15px;
+    border-top: 1px solid #333;
+  }
+  .comment-box textarea {
+    width: 100%;
+    resize: none;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  .comment-box button {
+    margin-top: 8px;
+    background: #ff2e63;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    float: right;
+    transition: background 0.3s ease;
+  }
+  .comment-box button:hover {
+    background: #ff4b7b;
+  }
+  .comments-list {
+    margin-top: 15px;
+    max-height: 100px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  .comments-list p {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 6px;
   }
 </style>
 </head>
 <body>
-  <div class="container" role="main">
-    <div class="hero" tabindex="0" role="button" aria-label="ভিডিও দেখুন">
-      <div class="play-button">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+  <h1>সেক্সি গ্যালারি</h1>
+  <div class="gallery" role="list">
+    <!-- Card Template Start -->
+    <div class="card" role="listitem" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ১" />
+      <div class="social-bar">
+        <div class="social-btn views" title="ভিউ">
+          <svg viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/><circle cx="12" cy="12" r="2.5"/></svg>
+          <span class="count">1534</span>
+        </div>
+        <div class="social-btn like" title="লাইক করুন" tabindex="0" role="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+            4.42 3 7.5 3c1.74 0 3.41 0.81 
+            4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 
+            22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <span class="count">298</span>
+        </div>
+        <div class="social-btn comment-btn" title="মন্তব্য করুন" tabindex="0" role="button" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><path d="M21 6h-2v9H7v2c0 
+            0.55 0.45 1 1 1h9l4 4V7c0-0.55-0.45-1-1-1zM17 
+            2H3c-1.1 0-2 0.9-2 2v12c0 1.1 0.9 2 2 
+            2h2v3l4-3h8c1.1 0 2-0.9 2-2V4c0-1.1-0.9-2-2-2z"/></svg>
+          <span class="count">42</span>
+        </div>
+      </div>
+      <div class="comment-box" aria-live="polite">
+        <textarea placeholder="আপনার মন্তব্য লিখুন..."></textarea>
+        <button type="button">পোস্ট করুন</button>
+        <div class="comments-list"></div>
       </div>
     </div>
-    <div class="content">
-      <h1>আজই শুরু করুন আপনার আয়</h1>
-      <p class="subtitle">সহজ, দ্রুত এবং নিরাপদ উপায়ে আয়ের সুযোগ</p>
-      <a href="https://yourapp.link/signup" class="btn-primary" role="button">এখনই যোগ দিন</a>
+    <!-- Card Template End -->
 
-      <section class="features" aria-label="সুবিধাসমূহ">
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
-          দ্রুত ও সহজ আয়
+    <!-- তুমি চাইলে এই কার্ডগুলো কপি করে আরও ছবি ও যোগ করতে পারো -->
+    <!-- নিচে আরেকটি কার্ড উদাহরণ: -->
+    <div class="card" role="listitem" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ২" />
+      <div class="social-bar">
+        <div class="social-btn views" title="ভিউ">
+          <svg viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/><circle cx="12" cy="12" r="2.5"/></svg>
+          <span class="count">980</span>
         </div>
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
-          রেফারেল বোনাস
+        <div class="social-btn like" title="লাইক করুন" tabindex="0" role="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+            4.42 3 7.5 3c1.74 0 3.41 0.81 
+            4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 
+            22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <span class="count">175</span>
         </div>
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
-          নিরাপদ পেমেন্ট
+        <div class="social-btn comment-btn" title="মন্তব্য করুন" tabindex="0" role="button" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><path d="M21 6h-2v9H7v2c0 
+            0.55 0.45 1 1 1h9l4 4V7c0-0.55-0.45-1-1-1zM17 
+            2H3c-1.1 0-2 0.9-2 2v12c0 1.1 0.9 2 2 
+            2h2v3l4-3h8c1.1 0 2-0.9 2-2V4c0-1.1-0.9-2-2-2z"/></svg>
+          <span class="count">25</span>
         </div>
-      </section>
+      </div>
+      <div class="comment-box" aria-live="polite">
+        <textarea placeholder="আপনার মন্তব্য লিখুন..."></textarea>
+        <button type="button">পোস্ট করুন</button>
+        <div class="comments-list"></div>
+      </div>
     </div>
-    <footer>© ২০২৫ BD Earning | যোগাযোগ: info@bdearning.com</footer>
+
   </div>
+
+<script>
+  // লাইক বাটন টগল
+  document.querySelectorAll('.social-btn.like').forEach(likeBtn => {
+    likeBtn.addEventListener('click', () => {
+      const countSpan = likeBtn.querySelector('.count');
+      let count = parseInt(countSpan.textContent);
+      const isLiked = likeBtn.classList.toggle('liked');
+      likeBtn.setAttribute('aria-pressed', isLiked);
+      count = isLiked ? count + 1 : count - 1;
+      countSpan.textContent = count;
+    });
+    likeBtn.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        likeBtn.click();
+      }
+    });
+  });
+
+  // মন্তব্য বক্স টগল
+  document.querySelectorAll('.social-btn.comment-btn').forEach(commentBtn => {
+    commentBtn.addEventListener('click', () => {
+      const card = commentBtn.closest('.card');
+      const commentBox = card.querySelector('.comment-box');
+      const isExpanded = commentBtn.getAttribute('aria-expanded') === 'true';
+      commentBtn.setAttribute('aria-expanded', !isExpanded);
+      if (!isExpanded) {
+        commentBox.style.display = 'block';
+        commentBox.querySelector('textarea').focus();
+      } else {
+        commentBox.style.display = 'none';
+      }
+    });
+    commentBtn.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        commentBtn.click();
+      }
+    });
+  });
+
+  // মন্তব্য পোস্ট করা
+  document.querySelectorAll('.comment-box').forEach(box => {
+    const textarea = box.querySelector('textarea');
+    const btn = box.querySelector('button');
+    const commentsList = box.querySelector('.comments-list');
+
+    btn.addEventListener('click', () => {
+      const text = textarea.value.trim();
+      if(text){
+        const p = document.createElement('p');
+        p.textContent = text;
+        commentsList.appendChild(p);
+        textarea.value = '';
+        // কমেন্ট কাউন্ট বাড়ানো
+        const card = box.closest('.card');
+        const commentBtn = card.querySelector('.social-btn.comment-btn .count');
+        commentBtn.textContent = parseInt(commentBtn.textContent) + 1;
+      }
+    });
+  });
+</script>
 </body>
 </html>
