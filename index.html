@@ -3,127 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BD Earning - সহজে আয় করুন</title>
+  <title>BD Earning - প্রিমিয়াম আয় প্ল্যাটফর্ম</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     * {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
     body {
-      background: #f7f9fc;
-      color: #222;
-      line-height: 1.6;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
     .container {
-      max-width: 480px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      max-width: 520px;
+      width: 100%;
+      padding: 40px 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
       text-align: center;
+      backdrop-filter: blur(10px);
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 12px;
-      color: #1e88e5;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
     p.subtitle {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 25px;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+      font-weight: 500;
     }
     .btn-primary {
-      background: #1e88e5;
-      color: white;
-      padding: 14px 32px;
-      border-radius: 30px;
+      background: linear-gradient(90deg, #ff8a00, #e52e71);
+      padding: 16px 48px;
+      border-radius: 50px;
+      font-size: 1.25rem;
       font-weight: 600;
-      font-size: 1.2rem;
       border: none;
+      color: white;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(30,136,229,0.4);
-      transition: background 0.3s ease;
+      box-shadow: 0 6px 20px rgba(229,46,113,0.6);
+      transition: all 0.3s ease;
       text-decoration: none;
       display: inline-block;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
     .btn-primary:hover {
-      background: #1565c0;
-      box-shadow: 0 8px 25px rgba(21,101,192,0.6);
+      filter: brightness(1.1);
+      box-shadow: 0 8px 30px rgba(229,46,113,0.8);
+      transform: translateY(-3px);
     }
     .features {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      margin-bottom: 30px;
+      gap: 25px;
+      margin-bottom: 35px;
     }
     .feature-item {
+      background: rgba(255,255,255,0.15);
+      padding: 18px 20px;
+      border-radius: 15px;
       display: flex;
       align-items: center;
-      gap: 15px;
-      font-size: 1rem;
-      color: #333;
-      font-weight: 500;
+      gap: 18px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+    .feature-item:hover {
+      background: rgba(255,255,255,0.3);
     }
     .feature-item svg {
-      fill: #1e88e5;
-      width: 26px;
-      height: 26px;
       flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+      filter: drop-shadow(0 0 2px rgba(255,255,255,0.6));
+      transition: transform 0.3s ease;
+    }
+    .feature-item:hover svg {
+      transform: scale(1.2);
     }
     .testimonials {
-      background: #e3f2fd;
-      border-radius: 10px;
-      padding: 20px;
+      background: rgba(0,0,0,0.15);
+      border-radius: 15px;
+      padding: 25px 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
     }
     .testimonial {
-      margin-bottom: 15px;
       font-style: italic;
-      color: #0d47a1;
+      font-size: 1rem;
+      color: #ffe;
+      line-height: 1.4;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+    }
+    .testimonial.active {
+      opacity: 1;
+      position: relative;
+      transform: none;
     }
     footer {
       font-size: 0.85rem;
-      color: #777;
-      margin-top: 30px;
+      color: #ddd;
+      margin-top: 15px;
+      text-align: center;
+      user-select: none;
     }
+
     @media (min-width: 600px) {
       .features {
         flex-direction: row;
         justify-content: space-between;
       }
+      .testimonial {
+        font-size: 1.1rem;
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" role="main">
     <h1>দিনে ৫০০৳ আয় করুন খুব সহজে!</h1>
-    <p class="subtitle">সরাসরি মোবাইলে, সহজ পেমেন্ট এবং দ্রুত উইথড্রয়াল</p>
-    <a href="https://yourapp.link/signup" class="btn-primary">এখনই শুরু করুন</a>
-    
-    <div class="features">
-      <div class="feature-item">
+    <p class="subtitle">সরাসরি মোবাইলে, নিরাপদ পেমেন্ট এবং দ্রুত উইথড্রয়াল</p>
+    <a href="https://yourapp.link/signup" class="btn-primary" role="button" aria-label="এখনই শুরু করুন">এখনই শুরু করুন</a>
+
+    <section class="features" aria-label="সুবিধাসমূহ">
+      <div class="feature-item" tabindex="0">
         <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
         দ্রুত আয় করুন
       </div>
-      <div class="feature-item">
+      <div class="feature-item" tabindex="0">
         <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
         রেফারেল বোনাস
       </div>
-      <div class="feature-item">
+      <div class="feature-item" tabindex="0">
         <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
         নিরাপদ পেমেন্ট
       </div>
-    </div>
-    
-    <div class="testimonials">
-      <div class="testimonial">"আমি BD Earning দিয়ে দিনে সহজেই ৫০০৳ উপার্জন করছি!" – সোহেল</div>
-      <div class="testimonial">"পেমেন্ট খুব দ্রুত পাচ্ছি, খুব সহজ ওয়েবসাইট!" – রিনা</div>
-    </div>
-    
+    </section>
+
+    <section class="testimonials" aria-label="ব্যবহারকারীর মতামত">
+      <div class="testimonial active" aria-live="polite">
+        "আমি BD Earning দিয়ে দিনে সহজেই ৫০০৳ উপার্জন করছি!" – সোহেল
+      </div>
+      <div class="testimonial" aria-live="polite">
+        "পেমেন্ট খুব দ্রুত পাচ্ছি, খুব সহজ ওয়েবসাইট!" – রিনা
+      </div>
+      <div class="testimonial" aria-live="polite">
+        "সেরা আয় প্ল্যাটফর্ম, সবাইকে আমি রেফার করছি!" – তুষার
+      </div>
+    </section>
+
     <footer>© 2025 BD Earning | যোগাযোগ: info@bdearning.com</footer>
   </div>
+
+  <script>
+    // Simple testimonial slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    let current = 0;
+
+    function showTestimonial(index) {
+      testimonials.forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+      });
+    }
+
+    setInterval(() => {
+      current = (current + 1) % testimonials.length;
+      showTestimonial(current);
+    }, 4000);
+  </script>
 </body>
 </html>
