@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BD Earning VIP Plan</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: #222;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 0 15px #ff4081;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ff4081;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 64, 129, 0.8);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      filter: drop-shadow(0 0 5px #ff4081);
+    }
+    .play-button svg {
+      fill: white;
+      width: 30px;
+      height: 30px;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #ff4081;
+    }
+    .card-description {
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      color: #ccc;
+    }
+    .stats {
+      display: flex;
+      gap: 15px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .stats span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .stats svg {
+      fill: #ff4081;
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Card 1 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ১">
+    <img src="photo1.jpg" alt="মেয়ে ১" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">রোমান্টিক যাত্রা</div>
+      <div class="card-description">রোমান্টিক যাত্রার স্মৃতিময় মুহূর্তের ভিডিও।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 2.4K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 420</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 25K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ২">
+    <img src="photo2.jpg" alt="মেয়ে ২" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">আনন্দের রাত</div>
+      <div class="card-description">আনন্দ আর মজার মুহূর্তের রোমান্টিক ভিডিও।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 1.1K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 270</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 9K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ৩">
+    <img src="photo3.jpg" alt="মেয়ে ৩" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">স্মৃতির আলোকচ্ছটা</div>
+      <div class="card-description">স্মৃতির আলোয় ভরা সুন্দর মুহূর্তের ভিডিও।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 2K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 430</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 18K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ৪">
+    <img src="photo4.jpg" alt="মেয়ে ৪" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">প্রেমের ঝলক</div>
+      <div class="card-description">প্রেমের ঝলকে ভরা রোমান্টিক ভিডিও সংগ্রহ।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 1.7K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 390</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 13K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ৫">
+    <img src="photo5.jpg" alt="মেয়ে ৫" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">মিষ্টি স্মৃতি</div>
+      <div class="card-description">মিষ্টি মুহূর্তের ভিডিও যা মনে রাখবেন চিরকাল।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 1.3K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 255</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 11K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ৬">
+    <img src="photo6.jpg" alt="মেয়ে ৬" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">রোমান্টিক যাত্রা</div>
+      <div class="card-description">রোমান্টিক যাত্রার স্মৃতিময় মুহূর্তের ভিডিও।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 2.4K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 420</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 25K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ৭">
+    <img src="photo7.jpg" alt="মেয়ে ৭" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">আনন্দের রাত</div>
+      <div class="card-description">আনন্দ আর মজার মুহূর্তের রোমান্টিক ভিডিও।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 1.1K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 270</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 9K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ৮">
+    <img src="photo8.jpg" alt="মেয়ে ৮" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">স্মৃতির আলোকচ্ছটা</div>
+      <div class="card-description">স্মৃতির আলোয় ভরা সুন্দর মুহূর্তের ভিডিও।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 2K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 430</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 18K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 9 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ৯">
+    <img src="photo9.jpg" alt="মেয়ে ৯" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">প্রেমের ঝলক</div>
+      <div class="card-description">প্রেমের ঝলকে ভরা রোমান্টিক ভিডিও সংগ্রহ।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 1.7K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 390</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 13K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 10 -->
+  <div class="card" tabindex="0" aria-label="ভিডিও ১০">
+    <img src="photo10.jpg" alt="মেয়ে ১০" />
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="card-content">
+      <div class="card-title">মিষ্টি স্মৃতি</div>
+      <div class="card-description">মিষ্টি মুহূর্তের ভিডিও যা মনে রাখবেন চিরকাল।</div>
+      <div class="stats">
+        <span><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 1.3K</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 6h-2v9H5v2h14a2 2 0 0 0 2-2V6z"/><path d="M17 2H7a2 2 0 0 0-2 2v9h12V4a2 2 0 0 0-2-2z"/></svg> 255</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 14a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><circle cx="12" cy="12" r="3"/></svg> 11K</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
