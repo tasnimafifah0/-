@@ -3,145 +3,174 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BD Sexy Gallery</title>
+<title>BD Earning Premium Landing</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
   * {
     margin: 0; padding: 0; box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
   body {
-    background: #111;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
     color: white;
-    padding: 20px;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 700;
-    color: #ff2e63;
-  }
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
-    gap: 16px;
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  .card {
-    position: relative;
-    cursor: pointer;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(255, 46, 99, 0.7);
-    transition: transform 0.3s ease;
-  }
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(255, 46, 99, 0.9);
-  }
-  .card img {
+  .container {
+    max-width: 480px;
     width: 100%;
-    display: block;
-    height: 220px;
-    object-fit: cover;
-    filter: brightness(0.85);
-    transition: filter 0.3s ease;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(255, 75, 43, 0.7);
   }
-  .card:hover img {
-    filter: brightness(1);
+  .hero {
+    position: relative;
+    height: 320px;
+    background: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+    cursor: pointer;
   }
   .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 46, 99, 0.8);
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 15px rgba(255, 46, 99, 0.9);
+    box-shadow: 0 0 18px 4px rgba(255, 255, 255, 0.6);
     transition: background 0.3s ease, transform 0.3s ease;
+    animation: pulse 2.5s infinite;
   }
-  .card:hover .play-button {
-    background: rgba(255, 46, 99, 1);
-    transform: scale(1.2);
-    box-shadow: 0 0 25px rgba(255, 46, 99, 1);
+  .play-button:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 28px 6px rgba(255, 255, 255, 0.8);
+  }
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 0 18px 4px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 28px 6px rgba(255, 255, 255, 0.9);
+    }
   }
   .play-button svg {
-    fill: white;
-    width: 24px;
-    height: 24px;
+    width: 42px;
+    height: 42px;
+    fill: #ff4b2b;
+    filter: drop-shadow(0 0 4px rgba(255, 75, 43, 0.7));
+    margin-left: 6px;
+  }
+  .content {
+    padding: 30px 25px 40px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+  }
+  p.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 28px;
+    font-weight: 500;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  }
+  .btn-primary {
+    background: #ff4b2b;
+    padding: 16px 48px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 22px rgba(255,75,43,0.8);
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 32px;
+  }
+  .btn-primary:hover {
+    background: #ff6f59;
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(255,111,89,0.9);
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #ffb1a0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 0 15px;
+  }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .feature-item svg {
+    width: 28px;
+    height: 28px;
+    fill: #ff4b2b;
+    filter: drop-shadow(0 0 3px rgba(255,75,43,0.7));
+    flex-shrink: 0;
+  }
+  footer {
+    font-size: 0.85rem;
+    color: #ffb1a0;
+    text-align: center;
+    user-select: none;
+    padding-bottom: 20px;
+  }
+  @media (min-width: 600px) {
+    .features {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 </style>
 </head>
 <body>
-  <h1>সেক্সি গ্যালারি</h1>
-  <div class="gallery" role="list">
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ১">
-      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ১" />
-      <div class="play-button" aria-hidden="true">
+  <div class="container" role="main">
+    <div class="hero" tabindex="0" role="button" aria-label="ভিডিও দেখুন">
+      <div class="play-button">
         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
       </div>
     </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ২">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ২" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
+    <div class="content">
+      <h1>আজই শুরু করুন আপনার আয়</h1>
+      <p class="subtitle">সহজ, দ্রুত এবং নিরাপদ উপায়ে আয়ের সুযোগ</p>
+      <a href="https://yourapp.link/signup" class="btn-primary" role="button">এখনই যোগ দিন</a>
+
+      <section class="features" aria-label="সুবিধাসমূহ">
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
+          দ্রুত ও সহজ আয়
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
+          রেফারেল বোনাস
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
+          নিরাপদ পেমেন্ট
+        </div>
+      </section>
     </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৩">
-      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৩" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-    </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৪">
-      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৪" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-    </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৫">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৫" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-    </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৬">
-      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৬" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-    </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৭">
-      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৭" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-    </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৮">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৮" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-    </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৯">
-      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৯" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-    </div>
-    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ১০">
-      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ১০" />
-      <div class="play-button" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-    </div>
+    <footer>© ২০২৫ BD Earning | যোগাযোগ: info@bdearning.com</footer>
   </div>
 </body>
 </html>
