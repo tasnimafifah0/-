@@ -3,87 +3,40 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sexy Landing Page</title>
+<title>BD Sexy Gallery</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
   * {
-    margin:0; padding:0; box-sizing:border-box;
+    margin: 0; padding: 0; box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
-  body, html {
-    height: 100%;
-    overflow: hidden;
-  }
-  .hero {
-    position: relative;
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1280&q=80') center/cover no-repeat;
-    cursor: pointer;
-  }
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 0, 60, 0.7);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 30px rgba(255, 0, 60, 0.8);
-    transition: background 0.3s ease, transform 0.3s ease;
-    animation: pulse 2s infinite;
-  }
-  .play-button:hover {
-    background: rgba(255, 0, 60, 1);
-    transform: translate(-50%, -50%) scale(1.2);
-    box-shadow: 0 0 40px rgba(255, 0, 60, 1);
-  }
-  @keyframes pulse {
-    0%, 100% {
-      box-shadow: 0 0 30px rgba(255, 0, 60, 0.8);
-    }
-    50% {
-      box-shadow: 0 0 45px rgba(255, 0, 60, 1);
-    }
-  }
-  .play-button svg {
-    fill: #fff;
-    width: 50px;
-    height: 50px;
-    margin-left: 5px;
-  }
-  .btn {
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 0, 60, 0.85);
+  body {
+    background: #111;
     color: white;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
     font-weight: 700;
-    font-size: 1.5rem;
-    padding: 18px 64px;
-    border-radius: 50px;
+    color: #ff2e63;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+    gap: 16px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .card {
+    position: relative;
     cursor: pointer;
-    box-shadow: 0 0 35px rgba(255, 0, 60, 0.9);
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
-    user-select: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 46, 99, 0.7);
+    transition: transform 0.3s ease;
   }
-  .btn:hover {
-    background: rgba(255, 0, 60, 1);
-    transform: scale(1.1);
-    box-shadow: 0 0 50px rgba(255, 0, 60, 1);
-  }
-</style>
-</head>
-<body>
-  <div class="hero" tabindex="0" role="button" aria-label="ভিডিও প্লে">
-    <div class="play-button" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-    </div>
-    <a href="https://yourapp.link" class="btn" role="button">এখনই ক্লিক করুন</a>
-  </div>
-</body>
-</html>
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(255, 46, 99, 0.9
