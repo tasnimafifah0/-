@@ -1,210 +1,242 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BD Earning VIP Plan - 10 Folder</title>
+  <meta charset="UTF-8">
+  <title>ভিডিও ফোল্ডার</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: #111;
-      color: #eee;
+      background-color: #111;
+      color: #fff;
       margin: 0;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      padding: 40px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 20px;
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .card {
-      background: #222;
-      border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 0 15px #ff4081;
+      background-color: #1e1e1e;
+      border-radius: 12px;
       overflow: hidden;
       position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px #ff4081;
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.2);
     }
+
     .card img {
       width: 100%;
-      height: 180px;
+      height: 130px;
       object-fit: cover;
     }
+
     .play-button {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(255, 64, 129, 0.85);
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0,0,0,0.7);
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
+      padding: 8px;
     }
+
     .play-button svg {
+      width: 20px;
+      height: 20px;
       fill: white;
-      width: 30px;
-      height: 30px;
     }
+
     .card-content {
-      padding: 15px;
+      padding: 12px;
     }
+
     .card-title {
-      font-size: 1.2rem;
+      font-size: 16px;
       font-weight: bold;
-      margin-bottom: 8px;
-      color: #ff4081;
+      margin-bottom: 6px;
     }
+
     .card-description {
-      font-size: 0.9rem;
-      margin-bottom: 12px;
+      font-size: 14px;
       color: #ccc;
+      margin-bottom: 10px;
     }
+
     .stats {
-      display: flex;
-      gap: 15px;
-      font-size: 0.85rem;
+      font-size: 13px;
       color: #aaa;
-    }
-    .stats span {
       display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .stats svg {
-      fill: #ff4081;
-      width: 16px;
-      height: 16px;
+      justify-content: space-between;
     }
   </style>
 </head>
 <body>
 
-<!-- Looping 10 Folders -->
+  <h1>🎬 ভিডিও ফোল্ডার কালেকশন</h1>
 
-<!-- You can replace photo#.jpg with your real image paths -->
-<!-- Card 1 -->
-<div class="card">
-  <img src="photo1.jpg" alt="ফোল্ডার ১">
-  <div class="play-button">
-    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-  </div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ১</div>
-    <div class="card-description">রোমান্স ভিডিও কালেকশন</div>
-    <div class="stats">
-      <span>❤️ 2.1K</span>
-      <span>💬 140</span>
-      <span>👁 20K</span>
-    </div>
-  </div>
-</div>
+  <div class="container">
+    <!-- Folder 1 -->
+    <a href="https://example.com/folder1" target="_blank">
+      <div class="card">
+        <img src="photo1.jpg" alt="Folder 1">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ১</div>
+          <div class="card-description">রোমান্টিক ভিডিও</div>
+          <div class="stats"><span>❤️ 2.1K</span><span>💬 120</span><span>👁 22K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 2 -->
-<div class="card">
-  <img src="photo2.jpg" alt="ফোল্ডার ২">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ২</div>
-    <div class="card-description">ডান্স ও পার্টি মুড</div>
-    <div class="stats"><span>❤️ 1.9K</span><span>💬 98</span><span>👁 15K</span></div>
-  </div>
-</div>
+    <!-- Folder 2 -->
+    <a href="https://example.com/folder2" target="_blank">
+      <div class="card">
+        <img src="photo2.jpg" alt="Folder 2">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ২</div>
+          <div class="card-description">অ্যাকশন হিটস</div>
+          <div class="stats"><span>❤️ 1.9K</span><span>💬 85</span><span>👁 18K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 3 -->
-<div class="card">
-  <img src="photo3.jpg" alt="ফোল্ডার ৩">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ৩</div>
-    <div class="card-description">বিচ ও ন্যাচার ভিডিও</div>
-    <div class="stats"><span>❤️ 1.5K</span><span>💬 65</span><span>👁 10K</span></div>
-  </div>
-</div>
+    <!-- Folder 3 -->
+    <a href="https://example.com/folder3" target="_blank">
+      <div class="card">
+        <img src="photo3.jpg" alt="Folder 3">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ৩</div>
+          <div class="card-description">ড্রামা কালেকশন</div>
+          <div class="stats"><span>❤️ 3K</span><span>💬 150</span><span>👁 25K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 4 -->
-<div class="card">
-  <img src="photo4.jpg" alt="ফোল্ডার ৪">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ৪</div>
-    <div class="card-description">ট্রাভেল ভিডিও ভলিউম ১</div>
-    <div class="stats"><span>❤️ 3.2K</span><span>💬 182</span><span>👁 22K</span></div>
-  </div>
-</div>
+    <!-- Folder 4 -->
+    <a href="https://example.com/folder4" target="_blank">
+      <div class="card">
+        <img src="photo4.jpg" alt="Folder 4">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ৪</div>
+          <div class="card-description">কমেডি ভিডিও</div>
+          <div class="stats"><span>❤️ 1.4K</span><span>💬 50</span><span>👁 10K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 5 -->
-<div class="card">
-  <img src="photo5.jpg" alt="ফোল্ডার ৫">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ৫</div>
-    <div class="card-description">মজার ভিডিও কালেকশন</div>
-    <div class="stats"><span>❤️ 1.3K</span><span>💬 45</span><span>👁 8K</span></div>
-  </div>
-</div>
+    <!-- Folder 5 -->
+    <a href="https://example.com/folder5" target="_blank">
+      <div class="card">
+        <img src="photo5.jpg" alt="Folder 5">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ৫</div>
+          <div class="card-description">থ্রিলার শো</div>
+          <div class="stats"><span>❤️ 2.6K</span><span>💬 98</span><span>👁 17K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 6 -->
-<div class="card">
-  <img src="photo6.jpg" alt="ফোল্ডার ৬">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ৬</div>
-    <div class="card-description">হরর শটস & রহস্য</div>
-    <div class="stats"><span>❤️ 980</span><span>💬 28</span><span>👁 6.4K</span></div>
-  </div>
-</div>
+    <!-- Folder 6 -->
+    <a href="https://example.com/folder6" target="_blank">
+      <div class="card">
+        <img src="photo6.jpg" alt="Folder 6">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ৬</div>
+          <div class="card-description">ডকুমেন্টারি</div>
+          <div class="stats"><span>❤️ 800</span><span>💬 40</span><span>👁 5K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 7 -->
-<div class="card">
-  <img src="photo7.jpg" alt="ফোল্ডার ৭">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ৭</div>
-    <div class="card-description">সেলিব্রেটি বিহাইন্ড দ্য সিন</div>
-    <div class="stats"><span>❤️ 2.7K</span><span>💬 110</span><span>👁 19K</span></div>
-  </div>
-</div>
+    <!-- Folder 7 -->
+    <a href="https://example.com/folder7" target="_blank">
+      <div class="card">
+        <img src="photo7.jpg" alt="Folder 7">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ৭</div>
+          <div class="card-description">হরর সিরিজ</div>
+          <div class="stats"><span>❤️ 1.2K</span><span>💬 60</span><span>👁 9K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 8 -->
-<div class="card">
-  <img src="photo8.jpg" alt="ফোল্ডার ৮">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ৮</div>
-    <div class="card-description">পাবজি গেম শট</div>
-    <div class="stats"><span>❤️ 800</span><span>💬 38</span><span>👁 5K</span></div>
-  </div>
-</div>
+    <!-- Folder 8 -->
+    <a href="https://example.com/folder8" target="_blank">
+      <div class="card">
+        <img src="photo8.jpg" alt="Folder 8">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ৮</div>
+          <div class="card-description">মিউজিক ভিডিও</div>
+          <div class="stats"><span>❤️ 3.5K</span><span>💬 210</span><span>👁 28K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 9 -->
-<div class="card">
-  <img src="photo9.jpg" alt="ফোল্ডার ৯">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ৯</div>
-    <div class="card-description">মিউজিক ভিডিও কালেকশন</div>
-    <div class="stats"><span>❤️ 1.4K</span><span>💬 51</span><span>👁 9K</span></div>
-  </div>
-</div>
+    <!-- Folder 9 -->
+    <a href="https://example.com/folder9" target="_blank">
+      <div class="card">
+        <img src="photo9.jpg" alt="Folder 9">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ৯</div>
+          <div class="card-description">শিক্ষামূলক ভিডিও</div>
+          <div class="stats"><span>❤️ 900</span><span>💬 30</span><span>👁 6K</span></div>
+        </div>
+      </div>
+    </a>
 
-<!-- Card 10 -->
-<div class="card">
-  <img src="photo10.jpg" alt="ফোল্ডার ১০">
-  <div class="play-button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-  <div class="card-content">
-    <div class="card-title">ফোল্ডার ১০</div>
-    <div class="card-description">VIP স্পেশাল ক্লিপস</div>
-    <div class="stats"><span>❤️ 3.6K</span><span>💬 210</span><span>👁 30K</span></div>
+    <!-- Folder 10 -->
+    <a href="https://example.com/folder10" target="_blank">
+      <div class="card">
+        <img src="photo10.jpg" alt="Folder 10">
+        <div class="play-button">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ফোল্ডার ১০</div>
+          <div class="card-description">বাচ্চাদের ভিডিও</div>
+          <div class="stats"><span>❤️ 1.7K</span><span>💬 75</span><span>👁 13K</span></div>
+        </div>
+      </div>
+    </a>
   </div>
-</div>
 
 </body>
 </html>
