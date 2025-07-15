@@ -1,176 +1,89 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BD Earning VIP</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sexy Landing Page</title>
+<style>
+  * {
+    margin:0; padding:0; box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body, html {
+    height: 100%;
+    overflow: hidden;
+  }
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1280&q=80') center/cover no-repeat;
+    cursor: pointer;
+  }
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 0, 60, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(255, 0, 60, 0.8);
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  .play-button:hover {
+    background: rgba(255, 0, 60, 1);
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 0 40px rgba(255, 0, 60, 1);
+  }
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 0 30px rgba(255, 0, 60, 0.8);
     }
-    body {
-      background: linear-gradient(135deg, #ff416c, #ff4b2b);
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+    50% {
+      box-shadow: 0 0 45px rgba(255, 0, 60, 1);
     }
-    .container {
-      background: rgba(0,0,0,0.6);
-      border-radius: 20px;
-      max-width: 480px;
-      width: 100%;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(255, 75, 43, 0.6);
-    }
-    .hero {
-      position: relative;
-      height: 300px;
-      background: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
-      cursor: pointer;
-    }
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80px;
-      height: 80px;
-      background: rgba(255,255,255,0.3);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 15px 3px rgba(255,255,255,0.5);
-      transition: background 0.3s ease, transform 0.3s ease;
-      animation: pulse 2.5s infinite;
-    }
-    .play-button:hover {
-      background: rgba(255,255,255,0.7);
-      transform: translate(-50%, -50%) scale(1.15);
-      box-shadow: 0 0 25px 5px rgba(255,255,255,0.8);
-    }
-    @keyframes pulse {
-      0%, 100% {
-        box-shadow: 0 0 15px 3px rgba(255,255,255,0.5);
-      }
-      50% {
-        box-shadow: 0 0 25px 7px rgba(255,255,255,0.9);
-      }
-    }
-    .play-button svg {
-      width: 40px;
-      height: 40px;
-      fill: #ff4b2b;
-      filter: drop-shadow(0 0 3px rgba(255,75,43,0.7));
-      margin-left: 5px;
-    }
-    .content {
-      padding: 28px 30px 40px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.6);
-    }
-    p.subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      font-weight: 500;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    }
-    .btn-primary {
-      background: #ff4b2b;
-      padding: 16px 48px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.3rem;
-      border: none;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(255,75,43,0.8);
-      transition: background 0.3s ease, transform 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      margin-bottom: 32px;
-    }
-    .btn-primary:hover {
-      background: #ff6f59;
-      transform: scale(1.1);
-      box-shadow: 0 8px 30px rgba(255,111,89,0.9);
-    }
-    .features {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      color: #ffb1a0;
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-      text-align: left;
-      padding: 0 20px;
-    }
-    .feature-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .feature-item svg {
-      width: 28px;
-      height: 28px;
-      fill: #ff4b2b;
-      filter: drop-shadow(0 0 2px rgba(255,75,43,0.7));
-      flex-shrink: 0;
-    }
-    footer {
-      font-size: 0.85rem;
-      color: #ffb1a0;
-      text-align: center;
-      user-select: none;
-      padding-bottom: 20px;
-    }
-    @media (min-width: 600px) {
-      .features {
-        flex-direction: row;
-        justify-content: space-around;
-      }
-    }
-  </style>
+  }
+  .play-button svg {
+    fill: #fff;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+  }
+  .btn {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 0, 60, 0.85);
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 18px 64px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 35px rgba(255, 0, 60, 0.9);
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    user-select: none;
+  }
+  .btn:hover {
+    background: rgba(255, 0, 60, 1);
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(255, 0, 60, 1);
+  }
+</style>
 </head>
 <body>
-  <div class="container" role="main">
-    <div class="hero" tabindex="0" role="button" aria-label="ভিডিও দেখুন">
-      <div class="play-button">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
+  <div class="hero" tabindex="0" role="button" aria-label="ভিডিও প্লে">
+    <div class="play-button" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
     </div>
-    <div class="content">
-      <h1>দিনে ৫০০৳ আয় করুন খুব সহজে!</h1>
-      <p class="subtitle">সরাসরি মোবাইলে, দ্রুত পেমেন্ট ও সহজ উইথড্রয়াল</p>
-      <a href="https://yourapp.link/signup" class="btn-primary" role="button">এখনই শুরু করুন</a>
-
-      <section class="features" aria-label="সুবিধাসমূহ">
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
-          দ্রুত আয় করুন
-        </div>
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
-          রেফারেল বোনাস
-        </div>
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.41-1.41L9 13.38l7.09-7.09 1.41 1.41z"/></svg>
-          নিরাপদ পেমেন্ট
-        </div>
-      </section>
-    </div>
-    <footer>© 2025 BD Earning | যোগাযোগ: info@bdearning.com</footer>
+    <a href="https://yourapp.link" class="btn" role="button">এখনই ক্লিক করুন</a>
   </div>
 </body>
 </html>
