@@ -39,4 +39,109 @@
   }
   .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(255, 46, 99, 0.9
+    box-shadow: 0 8px 30px rgba(255, 46, 99, 0.9);
+  }
+  .card img {
+    width: 100%;
+    display: block;
+    height: 220px;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: filter 0.3s ease;
+  }
+  .card:hover img {
+    filter: brightness(1);
+  }
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 46, 99, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(255, 46, 99, 0.9);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .card:hover .play-button {
+    background: rgba(255, 46, 99, 1);
+    transform: scale(1.2);
+    box-shadow: 0 0 25px rgba(255, 46, 99, 1);
+  }
+  .play-button svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+</style>
+</head>
+<body>
+  <h1>সেক্সি গ্যালারি</h1>
+  <div class="gallery" role="list">
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ১">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ১" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ২">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ২" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৩">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৩" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৪">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৪" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৫">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৫" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৬">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৬" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৭">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৭" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৮">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৮" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ৯">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ৯" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0" aria-label="ভিডিও প্লে ১০">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="মেয়ে ১০" />
+      <div class="play-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
